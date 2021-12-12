@@ -3,13 +3,13 @@ A web application for sharing my favourite restaurants with you. You can easily 
 
 # Web interface
 ## Main page
-![main](https://user-images.githubusercontent.com/87403901/145719285-7d8f970f-1dd3-4632-9491-8faebd13637d.png)
+![main](https://user-images.githubusercontent.com/87403901/145719463-fbc1a34d-c42e-44f7-a915-b99a044c8832.png)
 
 ## Detail of restaurant
 ![detail](https://user-images.githubusercontent.com/87403901/145719289-59f23122-fed0-4463-a2ae-66a607bb9393.png)
 
 ## Search restaurant
-![search](https://user-images.githubusercontent.com/87403901/145719296-b2c92125-b54f-43e2-8135-98dc5766aa4b.png)
+![search](https://user-images.githubusercontent.com/87403901/145719468-da764b4e-8a41-40ff-a4ca-f2d82db8218d.png)
 
 ## Add restaurant
 ![add](https://user-images.githubusercontent.com/87403901/145719306-492dae30-d26c-4f5d-b131-ea589c5b5b36.png)
