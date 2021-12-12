@@ -9,6 +9,7 @@ router.get('/search', (req, res) => {
   let searchRestaurants = []
   Restaurant.find()
     .lean()
+    .sort({ name_en: 'asc' }) // sorting by name_en with ascending
     .then(restaurants => {
       searchRestaurants = restaurants.filter(restaurant => {
         return restaurant.name.trim().toLowerCase().includes(keyword) || restaurant.name_en.trim().toLowerCase().includes(keyword)
