@@ -3,14 +3,22 @@
   <div class="search-bar-outer">
     <div class="search-bar-inner">
       {{!-- router: /search --}}
-      <form action="/search">
-        <h4 class="mb-2">尋找餐廳：</h4>
-        <div class="input-group">
+      <form action="/restaurants/search" class="row">
+        <h4 class="mb-2 col-12">尋找餐廳：</h4>
+        <div class="input-group col-6">
           <input type="text" name="keyword" class="form-control" placeholder="輸入餐廳、分類" aria-label="Restaurant Name..."
             value="{{keyword}}" aria-describedby="search-button">
           <div class="input-group-append">
             <button class="btn btn-major" type="submit" id="search-button"><i class="fas fa-search"></i></button>
           </div>
+        </div>
+        <div class="input-group col-6">
+          <select class="form-control" id="sort" name="sort">
+            <option><button class="btn" name="sort-name-asc" type="submit">A > Z</button></option>
+            <option><button class="btn" name="sort-name-desc" type="submit">Z > A</button></option>
+            <option><button class="btn" name="sort-category-asc" type="submit">類別</button></option>
+            <option><button class="btn" name="sort-location-asc" type="submit">地區</button></option>
+          </select>
         </div>
       </form>
     </div>
