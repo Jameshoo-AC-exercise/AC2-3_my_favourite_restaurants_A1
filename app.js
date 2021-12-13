@@ -9,7 +9,18 @@ const routes = require('./routes')  // router
 require('./config/mongoose')  // mongoose connection
 
 // setting handlebars
-app.engine('hbs', exphbs({ defaultLayout: 'main', extname: 'hbs' }))
+app.engine('hbs', exphbs({
+  defaultLayout: 'main', extname: 'hbs',
+  helpers: {
+    ifEqual: function (a, b) {
+      if (a === b) {
+        return 'selected'
+      } else {
+        return ''
+      }
+    }
+  }
+}))
 app.set('view engine', 'hbs')
 
 // use css & js
