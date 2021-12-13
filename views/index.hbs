@@ -13,11 +13,11 @@
           </div>
         </div>
         <div class="input-group col-6">
-          <select class="form-control" id="sort" name="sort">
-            <option><button class="btn" name="sort-name-asc" type="submit">A > Z</button></option>
-            <option><button class="btn" name="sort-name-desc" type="submit">Z > A</button></option>
-            <option><button class="btn" name="sort-category-asc" type="submit">類別</button></option>
-            <option><button class="btn" name="sort-location-asc" type="submit">地區</button></option>
+          <select class="form-control form-select" id="sort" name="sort" onchange="this.form.submit()">
+            <option value="name_en asc" {{ifEqual sort "name_en asc" }}>A > Z</option>
+            <option value="name_en desc" {{ifEqual sort "name_en desc" }}>Z > A</option>
+            <option value="category asc" {{ifEqual sort "category asc" }}>類別</option>
+            <option value="location asc" {{ifEqual sort "location asc" }}>地區</option>
           </select>
         </div>
       </form>

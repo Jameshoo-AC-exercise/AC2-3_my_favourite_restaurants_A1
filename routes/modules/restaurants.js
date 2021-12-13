@@ -6,15 +6,18 @@ const Restaurant = require('../../models/restaurant')
 // render search restaurants
 router.get('/search', (req, res) => {
   const keyword = req.query.keyword.trim().toLowerCase()
+  const sort = req.query.sort
+  const sortTarget = sort.split(' ')[0]
+  const sortType = sort.split(' ')[1]
   let searchRestaurants = []
   Restaurant.find()
     .lean()
-    .sort({ name_en: 'asc' }) // sorting by name_en with ascending
+    .sort({ sortTarget: sortType }) // sorting by name_en with ascending
     .then(restaurants => {
       searchRestaurants = restaurants.filter(restaurant => {
         return restaurant.name.trim().toLowerCase().includes(keyword) || restaurant.name_en.trim().toLowerCase().includes(keyword)
       })
-      res.render('index', { restaurants: searchRestaurants, keyword })
+      res.render('index', { restaurants: searchRestaurants, keyword, sort })
     })
 })
 
