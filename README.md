@@ -2,6 +2,9 @@
 A web application for sharing my favourite restaurants with you. You can easily search the restaurant with name or type of food that you are interested in.
 
 # Web interface
+## Register page
+![register](https://user-images.githubusercontent.com/87403901/148692545-42c42ce1-35bc-485d-b387-aa200c7e9081.png)
+
 ## Main page
 ![main](https://user-images.githubusercontent.com/87403901/148689946-352840c7-a272-40da-9eb7-6e7c5e9d2c5c.png)
 
