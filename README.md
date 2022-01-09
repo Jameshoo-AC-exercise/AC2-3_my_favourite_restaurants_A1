@@ -23,13 +23,17 @@ A web application for sharing my favourite restaurants with you. You can easily 
 3. Search the restaurants that you are interested by typing the name or type of food of restaurants.
 
 # Installation
+Download and install the mongoDB from the website below
+
+    https://www.mongodb.com/ 
+
 Using terminal with git clone to download this web application to your local directory.
 
-    git clone https://github.com/jameshoo123/my_favourite_restaurants.git
+    git clone https://github.com/jameshoo123/AC2-3_my_favourite_restaurants_A1.git
 
 Change the working directory 
 
-    cd my_favourite_restaurants
+    cd AC2-3_my_favourite_restaurants_A1
 
 Install Node.js (you need to download and install the nvm from https://github.com/coreybutler/nvm-windows/releases for the following installation)
 
@@ -60,6 +64,14 @@ Setting the environment for development
 * Bootstrap 5.1.3
 * Font-awesome 6.0.0
 * bcryptjs 2.4.3
+* connect-flash 0.1.1
+* dotenv 10.0.0
+* Font-awesome 6.0.0
+* mongoose 6.1.1
+* bcryptjs 2.4.3
+* passport 0.5.2
+* passport-facebook 3.0.0
+* passport-local 1.0.0
 
 # Contributor
 [jameshoo123](https://github.com/Azure/azure-content/blob/master/contributor-guide/contributor-guide-index.md)
