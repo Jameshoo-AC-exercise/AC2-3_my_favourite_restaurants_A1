@@ -3,19 +3,19 @@ A web application for sharing my favourite restaurants with you. You can easily 
 
 # Web interface
 ## Main page
-![main](https://user-images.githubusercontent.com/87403901/145719463-fbc1a34d-c42e-44f7-a915-b99a044c8832.png)
+![main](https://user-images.githubusercontent.com/87403901/148689946-352840c7-a272-40da-9eb7-6e7c5e9d2c5c.png)
 
 ## Detail of restaurant
-![detail](https://user-images.githubusercontent.com/87403901/145719289-59f23122-fed0-4463-a2ae-66a607bb9393.png)
+![detail](https://user-images.githubusercontent.com/87403901/148689952-151acf0e-1f18-4a63-9dd3-2e76abf66268.png)
 
 ## Search restaurant
-![search](https://user-images.githubusercontent.com/87403901/145719468-da764b4e-8a41-40ff-a4ca-f2d82db8218d.png)
+![search](https://user-images.githubusercontent.com/87403901/148689955-bdfcda79-4532-46e8-8d1b-a6a0f4abc7fc.png)
 
 ## Add restaurant
-![add](https://user-images.githubusercontent.com/87403901/145719306-492dae30-d26c-4f5d-b131-ea589c5b5b36.png)
+![add](https://user-images.githubusercontent.com/87403901/148689958-89b0d43e-4afd-4c06-848d-e94fd36f2be8.png)
 
 ## Edit restaurant
-![edit](https://user-images.githubusercontent.com/87403901/145719311-ccb99883-6856-4d5e-b11b-2628d2a67710.png)
+![edit](https://user-images.githubusercontent.com/87403901/148689959-e551c147-c217-459e-83f6-47574e558820.png)
 
 # Features
 1. All favourite restaurants were shown on main page (include name, type of food, and promoted star of restaurants were displayed)
@@ -59,6 +59,7 @@ Setting the environment for development
 * Express-Handlebars 5.3.5
 * Bootstrap 5.1.3
 * Font-awesome 6.0.0
+* bcryptjs 2.4.3
 
 # Contributor
 [jameshoo123](https://github.com/Azure/azure-content/blob/master/contributor-guide/contributor-guide-index.md)
