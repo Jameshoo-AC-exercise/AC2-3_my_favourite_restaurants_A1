@@ -7,6 +7,8 @@ const app = express()
 const port = 3000
 
 const routes = require('./routes') // router
+const userPassport = require('./config/passport')
+
 require('./config/mongoose') // mongoose connection
 
 // setting handlebars
@@ -41,6 +43,7 @@ app.use(
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: true })) // Express include the body-parser from version 4.16.0
+userPassport(app) // Passport verification
 app.use(routes) // router connection
 
 // router listener
