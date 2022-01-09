@@ -4,8 +4,12 @@ const methodOverride = require('method-override') // function for ?_method=PUT a
 const session = require('express-session')
 const flash = require('connect-flash')
 
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
+
 const app = express()
-const port = 3000
+const port = process.env.PORT
 
 const routes = require('./routes') // router
 const userPassport = require('./config/passport')
@@ -34,7 +38,7 @@ app.set('view engine', 'hbs')
 // use session for specific user
 app.use(
   session({
-    secret: 'ThisIsMySecret',
+    secret: process.env.SESSION_SECRET,
     resave: false, // 此爲進階的 session store 需求，可以再深入去研究
     saveUninitialized: true, // 此爲進階的 session store 需求，可以再深入去研究
   })
