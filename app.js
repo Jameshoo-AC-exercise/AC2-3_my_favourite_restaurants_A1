@@ -1,6 +1,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const methodOverride = require('method-override') // function for ?_method=PUT and ?_method=DELETE
+const session = require('express-session')
 
 const app = express()
 const port = 3000
@@ -26,6 +27,15 @@ app.engine(
   })
 )
 app.set('view engine', 'hbs')
+
+// use session for specific user
+app.use(
+  session({
+    secret: 'ThisIsMySecret',
+    resave: false, // 此爲進階的 session store 需求，可以再深入去研究
+    saveUninitialized: true, // 此爲進階的 session store 需求，可以再深入去研究
+  })
+)
 
 // use css & js
 app.use(express.static('public'))
