@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 // data type identification
 const userSchema = new Schema({
-  name: { type: String, required: true },
+  name: { type: String },
   email: { type: String, required: true },
   password: { type: String, required: true },
   createdAt: {
@@ -12,4 +12,4 @@ const userSchema = new Schema({
   },
 })
 
-module.exports = mongoose.model('user', userSchema)
+module.exports = mongoose.model('User', userSchema)

@@ -1,60 +1,61 @@
 <div class='row mt-5'>
   <div class='col-md-6 m-auto'>
     <div class='card card-body'>
-      <h1 class='text-center mt-3'>Register</h1>
+      <h1 class='text-center mt-3'>注冊</h1>
+      {{> message}}
       <form action='/users/register' method='POST'>
         <div class='form-group'>
-          <label for='name'>Name</label>
+          <label for='name'>名字</label>
           <input
             type='text'
             id='name'
             name='name'
             class='form-control'
-            placeholder='Enter Name'
+            placeholder='輸入名字'
             value='{{name}}'
           />
         </div>
         <div class='form-group'>
-          <label for='email'>Email</label>
+          <label for='email'>信箱 (*必填)</label>
           <input
             type='email'
             id='email'
             name='email'
             class='form-control'
-            placeholder='Enter Email'
+            placeholder='輸入信箱'
             value='{{email}}'
           />
         </div>
         <div class='form-group'>
-          <label for='password'>Password</label>
+          <label for='password'>密碼 (*必填)</label>
           <input
             type='password'
             id='password'
             name='password'
             class='form-control'
-            placeholder='Enter Password'
+            placeholder='輸入密碼'
             value='{{password}}'
           />
         </div>
         <div class='form-group'>
-          <label for='confirmPassword'>Confirm Password</label>
+          <label for='confirmPassword'>確認密碼 (*必填)</label>
           <input
             type='password'
             id='confirmPassword'
             name='confirmPassword'
             class='form-control'
-            placeholder='Confirm Password'
+            placeholder='再一次輸入密碼'
             value='{{confirmPassword}}'
           />
         </div>
         <button
           type='submit'
           class='btn btn-primary btn-block'
-        >Register</button>
+        >注冊</button>
       </form>
       <p class='lead mt-4'>
-        Have An Account?
-        <a href='/users/login'>Login</a>
+        已有賬號?
+        <a href='/users/login'>登入</a>
       </p>
     </div>
   </div>
