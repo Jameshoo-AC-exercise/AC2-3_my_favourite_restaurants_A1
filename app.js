@@ -44,6 +44,14 @@ app.use(express.static('public'))
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: true })) // Express include the body-parser from version 4.16.0
 userPassport(app) // Passport verification
+
+app.use((req, res, next) => {
+  // 你可以在這裡 console.log(req.user) 等資訊來觀察
+  res.locals.isAuthenticated = req.isAuthenticated() // 每次開啓頁面就會先確認抓取是否已通過 userPassport(app) 認真確認有登入的權限
+  res.locals.user = req.user
+  next()
+})
+
 app.use(routes) // router connection
 
 // router listener
