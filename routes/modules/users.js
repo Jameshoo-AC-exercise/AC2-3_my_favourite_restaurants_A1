@@ -4,19 +4,18 @@ const passport = require('passport')
 
 const User = require('../../models/user')
 
-router.get(
+router.get('/login', (req, res) => {
+  res.render('login')
+})
+
+// routes/modules/users.js
+router.post(
   '/login',
-  //   (req, res) => {
-  //   res.render('login')
-  //    }
   passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/users/login',
   })
 )
-
-// routes/modules/users.js
-router.post('/login', (req, res) => {})
 
 router.get('/register', (req, res) => {
   res.render('register')

@@ -1,6 +1,8 @@
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
 
+const User = require('../models/user')
+
 module.exports = app => {
   // 初始化 Passport 模組
   app.use(passport.initialize())
@@ -27,6 +29,7 @@ module.exports = app => {
   )
   // 設定序列化與反序列化
   passport.serializeUser((user, done) => {
+    console.log(user)
     done(null, user.id)
   })
   passport.deserializeUser((id, done) => {

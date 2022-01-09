@@ -6,7 +6,7 @@ const restaurants = require('./modules/restaurants')
 const users = require('./modules/users')
 
 router.use('/', home)
-router.use('/restaurants', restaurants)
 router.use('/users', users)
+router.use('/restaurants', restaurants)
 
 module.exports = router
