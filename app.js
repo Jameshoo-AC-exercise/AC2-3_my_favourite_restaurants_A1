@@ -5,29 +5,33 @@ const methodOverride = require('method-override') // function for ?_method=PUT a
 const app = express()
 const port = 3000
 
-const routes = require('./routes')  // router
-require('./config/mongoose')  // mongoose connection
+const routes = require('./routes') // router
+require('./config/mongoose') // mongoose connection
 
 // setting handlebars
-app.engine('hbs', exphbs({
-  defaultLayout: 'main', extname: 'hbs',
-  helpers: {
-    ifEqual: function (a, b) {
-      if (a === b) {
-        return 'selected'
-      } else {
-        return ''
-      }
-    }
-  }
-}))
+app.engine(
+  'hbs',
+  exphbs({
+    defaultLayout: 'main',
+    extname: 'hbs',
+    helpers: {
+      ifEqual: function (a, b) {
+        if (a === b) {
+          return 'selected'
+        } else {
+          return ''
+        }
+      },
+    },
+  })
+)
 app.set('view engine', 'hbs')
 
 // use css & js
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: true })) // Express include the body-parser from version 4.16.0
-app.use(routes)  // router connection
+app.use(routes) // router connection
 
 // router listener
 app.listen(port, () => {
