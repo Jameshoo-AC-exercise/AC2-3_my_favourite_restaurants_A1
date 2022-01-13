@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-// data type identification
 const restaurantSchema = new Schema({
+  id: { type: Number, required: true },
   name: { type: String, required: true },
   name_en: { type: String, required: true },
   category: { type: String, required: true },
